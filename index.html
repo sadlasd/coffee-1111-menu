@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f1e7" />
+    <meta
+      name="description"
+      content="Меню кофейни 11.11: классический кофе, авторские напитки, милкшейки, лимонады и десерты."
+    />
+    <title>Меню — Кофейня 11.11</title>
+    <link rel="stylesheet" href="style.css?v=5" />
+    <script src="theme.js?v=2"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#"
+        ><img src="assets/logo.svg" alt="Кофейня 11.11"
+      /></a>
+      <div class="header-actions">
+        <span class="header-note">Хороший кофе.<br />Хороший день.</span
+        ><button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Включить тёмную тему"
+          aria-pressed="false"
+        >
+          <span aria-hidden="true" class="theme-icon">☾</span
+          ><span class="theme-label">Тёмная</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">ВАША КОФЕЙНАЯ ПАУЗА</span>
+          <h1>Время для<br /><em>чего-то тёплого.</em></h1>
+          <p>
+            Любимая классика, необычные вкусы<br />и маленькие радости к кофе.
+          </p>
+          <a class="hero-link" href="#menu">Выбрать напиток <span>↓</span></a>
+        </div>
+        <div class="hero-visual">
+          <button
+            class="cup-button"
+            type="button"
+            aria-label="Нажмите, чтобы чашка ожила"
+          >
+            <span class="cup-glow" aria-hidden="true"></span
+            ><svg class="cup-steam" viewBox="0 0 160 120" aria-hidden="true">
+              <path d="M45 108C24 84 67 73 46 49S53 21 45 9" />
+              <path d="M80 112C59 88 102 75 80 51S88 24 80 10" />
+              <path d="M115 108C94 84 137 73 116 49S123 21 115 9" /></svg
+            ><img
+              class="cup"
+              src="assets/latte-v2.png"
+              width="1254"
+              height="1254"
+              alt="Чашка капучино с латте-артом"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </button>
+        </div>
+      </section>
+      <div id="menu" class="menu-head">
+        <span class="eyebrow">МЕНЮ 11.11</span>
+        <h2>Что вам сегодня?</h2>
+      </div>
+      <nav class="tabs" aria-label="Разделы меню">
+        <button data-tab="coffee" aria-pressed="true">Классика</button
+        ><button data-tab="signature" aria-pressed="false">Авторские</button
+        ><button data-tab="milkshake" aria-pressed="false">Милкшейки</button
+        ><button data-tab="lemonade" aria-pressed="false">Лимонады</button
+        ><button data-tab="desserts" aria-pressed="false">Десерты</button>
+      </nav>
+      <section id="content" aria-live="polite"><p>Загружаем меню…</p></section>
+      <section class="extras">
+        <div>
+          <span class="eyebrow">ПО ВАШЕМУ ВКУСУ</span>
+          <h2>Добавить к напитку</h2>
+        </div>
+        <div id="extras"></div>
+      </section>
+      <footer>
+        <span>11.11</span>
+        <p>Сделайте маленькую паузу.<br />Мы приготовим кофе.</p>
+        <small>Цены указаны в рублях. Наличие уточняйте у бариста.</small>
+      </footer>
+    </main>
+    <script src="app.js?v=2"></script>
+    <script src="cup.js?v=1"></script>
+    <script src="swipe.js?v=1"></script>
+  </body>
+</html>
